@@ -1,0 +1,75 @@
+"dota_hote"
+{
+    "TimeBetweenSpawns"             "30"
+    "UnitSpawnEnabled"              "1"
+
+    "UnitSpawners"
+    {
+        "Radiant_1"
+        {
+            "SpawnerName"       "radiant_spawner"
+            "Waypoint"          "radiant_path_1"
+        }
+        "Dire_1"
+        {
+            "SpawnerName"       "dire_spawner"
+            "Waypoint"          "dire_path_1"
+        }
+    }
+
+    "Troups"
+    {
+        "Dire"
+        {
+            "1"
+            {
+                "NPCName"          "npc_dota_creature_corpselord"
+                "DefaultCount"            "3"
+            }
+
+            "2"
+            {
+                "NPCName"         "npc_dota_creature_gnoll_assassin"
+                "DefaultCount"            "1"
+            }
+        }
+
+        "Radiant"
+        {
+            "1"
+            {
+                "NPCName"          "npc_dota_creature_corpselord"
+                "DefaultCount"            "3"
+            }
+
+            "2"
+            {
+                "NPCName"         "npc_dota_creature_gnoll_assassin"
+                "DefaultCount"            "1"
+            }
+        }
+    }
+
+    "JungleBosses"
+    {
+        "BossId_1"
+        {
+            "BossName"          "npc_dota_creature_corpselord"
+            "SpawnLocation"     "middle_jungle_boss_spawn"
+            "NextBossId"        "BossId_2"
+            "RespawnTime"       "0"
+            "NextBossRespawnTime"       "5"
+            "SpawnedOnGameStart"        "1"
+        }
+
+        "BossId_2"
+        {
+            "BossName"          "npc_dota_creature_gnoll_assassin"
+            "SpawnLocation"     "middle_jungle_boss_spawn"
+            "NextBossId"        "BossId_1"
+            "RespawnTime"       "0"
+            "NextBossRespawnTime"       "5"
+            "SpawnedOnGameStart"        "0"
+        }
+    }
+}

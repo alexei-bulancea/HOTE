@@ -1,0 +1,78 @@
+"DOTAAbilities"
+{
+    //===================================================================================================================
+    // Sheiled of wood
+    //===================================================================================================================
+	"item_helm_of_kings"
+	{
+		"ID"  							"ckng"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"item_helm"
+
+
+		"ItemCost"						"0"	
+		"AbilityCastRange"				"400"
+		"AbilityCooldown"				"60"
+		"AbilityManaCost"				"0"
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
+		"ItemDroppable"					"1"
+		"ItemInitialCharges"		     	"1"
+		"PingOverrideText"				"item_helm_of_kings"
+		"ItemInitialCharges" "1" //How many charges should the item start with - Tango x3
+		"ItemDisplayCharges" "1" //Hide the charges of the item - Aegis
+		"ItemRequiresCharges" "1"
+		"Modifiers"
+		{
+			"modifier_helm_of_kings"
+			{
+				"Passive"	 "1"
+				"IsHidden"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"  "500"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"			 "10000"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"100"
+				}
+			}
+		}
+	}
+
+	//============================================================================================
+	//"Amulet of Energy"
+	//"Abilities" "AIx5,A00T,A029,A00R"
+
+	//============================================================================================
+	"item_amulet_of_energy"
+	{
+		"ID" "amrc"
+		"BaseClass" "item_datadriven"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" "item_helm"
+		"ItemCost" "0"
+		"ItemKillable" "1"
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemInitialCharges" "1"
+		"ItemDisplayCharges" "1"
+		"ItemRequiresCharges" "1"
+		"Modifiers"
+		{
+			"modifier_amulet_of_energy" 
+			{
+				"Passive" "1"
+				"IsHidden" "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"5"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"5"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"5"
+					"MODIFIER_PROPERTY_MANA_BONUS"							"500"
+					"MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"				"0.6"
+				}
+			}
+		}
+	}
+}

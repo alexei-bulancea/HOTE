@@ -1,0 +1,8 @@
+template_map
+{
+	material materials/overviews/template_map.vmat
+	pos_x -248
+	pos_y 8300
+	scale 8.348
+}
+
