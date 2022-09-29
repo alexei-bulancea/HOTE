@@ -108,8 +108,10 @@ function CHoteTest:OnStateChange()
 
           if hPlayer ~= nil then
             --hPlayer:MakeRandomHeroSelection()
-			 CreateHeroForPlayer('npc_dota_hero_queenofpain', hPlayer)
-
+			 local hero = CreateHeroForPlayer('npc_dota_hero_terrorblade', hPlayer)
+			 	while hero:GetLevel() < 25 do
+					hero:HeroLevelUp( false )
+				end
           end
         end
       end

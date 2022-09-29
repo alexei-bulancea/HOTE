@@ -20,5 +20,33 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		"MovementSpeed"				"270"	
 	}
+
+	"npc_dota_hero_terrorblade_demon_hunter"
+	{
+		"override_hero"				"npc_dota_hero_terrorblade"			// Hero to override
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"Ability1"					"demon_hunter_rain_of_fire"
+		"Ability2"					"demon_hunter_killer_instinct"
+		"Ability3"					"demon_hunter_evasion"
+		"Ability4"					"demon_hunter_vampiric_aura"
+		"Ability5"					"demon_hunter_metamorphosis"
+		"Ability6"					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+		"MovementSpeed"				"360"	
+
+		"AttributeBaseStrength"		"10"									// Base strength
+		"AttributeStrengthGain"		"3"									// Strength bonus per level.
+		"AttributeBaseIntelligence"	"7"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.2"									// Intelligence bonus per level.
+		"AttributeBaseAgility"		"9"									// Base agility
+		"AttributeAgilityGain"		"3.6"									// Agility bonus per level.
+	}
 }
 

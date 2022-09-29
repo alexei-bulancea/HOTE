@@ -2,7 +2,16 @@
 "DOTAUnits"
 {
 	"Version"	"1"
-	
+	"dummy_unit_vulnerable"
+	{
+		"BaseClass"            "npc_dota_creature"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"   "0"  
+		"VisionNighttimeRange"  "0"
+		"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"             "dummy_passive_vulnerable"
+	}
 	//=================================================================================	
 	// Creature: Gnoll Assassin
 	//=================================================================================
@@ -131,8 +140,8 @@
 		"AttackDamageMax"			"45"		// Damage range max.
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"128"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"1800"		// Range within a target can be acquired.
+		"AttackRange"				"28"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			""			// Speed of projectile.
 
