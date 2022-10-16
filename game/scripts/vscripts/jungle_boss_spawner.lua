@@ -12,8 +12,6 @@ function CJungleBossSpawner:ReadConfiguration(kvJungleBoss)
 end
 
 function CJungleBossSpawner:Begin()
-    print("BEgin for jungle boss")
-
     if self._bSpawnedOnGameStart == 1 then
         local radiantSpawner = Entities:FindByName(nil, self._sSpawnLocation)
         local radiantLocation = radiantSpawner:GetAbsOrigin()

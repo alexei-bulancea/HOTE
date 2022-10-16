@@ -54,7 +54,7 @@
     {
         "BossId_1"
         {
-            "BossName"          "npc_dota_creature_corpselord"
+            "BossName"          "npc_dota_creature_forest_troll_warlord"
             "SpawnLocation"     "middle_jungle_boss_spawn"
             "NextBossId"        "BossId_2"
             "RespawnTime"       "0"

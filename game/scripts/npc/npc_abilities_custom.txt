@@ -549,4 +549,147 @@
 			}
 		}
 	}
+
+	//-------------------------------------------------------------------------------
+	//--------ACat
+	//---------------------------------------------------------------------------------
+	"trueshot_aura"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityTextureName"			"drow_ranger_trueshot"
+
+		"MaxLevel"						"4"
+		"AOEradius"						"%area_of_effect"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"area_of_effect" "900"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"addition_damage" "10 20 30 40"
+			}
+		}
+		"OnOwnerSpawned"
+		{
+			"LevelUpAbility"
+			{
+				"Target" 		"CASTER"
+				"AbilityName"		"trueshot_aura"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_trueshot"
+			{
+				"IsHidden"				"1"
+				"Passive"				"1"
+
+				"Aura"					"modifier_trueshot_aura"
+				"Aura_Radius"			"%area_of_effect"
+				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"			"DOTA_UNIT_TARGET_ALL"
+			}
+
+			"modifier_trueshot_aura"
+			{
+				"IsBuff" "1"
+				"IsPurgable" "0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"				"%addition_damage"
+				}
+			}
+		}
+	}
+
+	//-------------------------------------------------------------------------------
+	//--------A11D
+	//---------------------------------------------------------------------------------
+	"forest_troll_warlord_berserk"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_AUTOCAST   "
+
+		"AbilityTextureName"		"troll_warlord_berserkers_rage_active"
+		"MaxLevel"					"4"
+		"AbilityManaCost"			"20"
+		"AbilityCooldown"			"25	20	15	10"
+
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"900"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed"			"220 260 300 350"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"addition_damage_taken"		"30 20 15 10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"		"12"
+			}
+		}		
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"neutral_bosses/forest_troll_warlord/berserk.lua"
+				"Function"			"ToggleAbility"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"					"CASTER"
+				"ModifierName"				"modifier_troll_warlord_berserk"
+				"duration"					"%duration"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_troll_warlord_berserk"
+			{
+				"IsBuff" 		"1"
+				"IsPurgable"	"0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"	"%addition_damage_taken"
+				}
+			}
+
+			"modifier_arphax_heal_unit_spawned"
+			{
+				"Passive" 			"1"
+				"IsHidden" 			"1"
+				"ThinkInterval"		"1"
+	            "OnIntervalThink"
+	         	{
+					"RunScript"
+					{
+						"ScriptFile"    "neutral_bosses/forest_troll_warlord/berserk.lua"
+						"Function"      "AutoCastAbility"
+					}
+				}
+			}
+		}
+	}
 }
