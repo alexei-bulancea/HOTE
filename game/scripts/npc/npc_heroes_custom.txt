@@ -13,12 +13,18 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		
 	}
-		"npc_dota_hero_queenofpain_template"
+	"npc_dota_hero_queenofpain_test"
 	{
 		"override_hero"				"npc_dota_hero_queenofpain"			// Hero to override
-		
+
+		"Ability1"					"trueshot_aura"
+		"Ability2"					"forest_troll_warlord_berserk"
+		"Ability3"					"demon_hunter_evasion"
+		"Ability4"					"demon_hunter_vampiric_aura"
+		"Ability5"					"demon_hunter_metamorphosis"
+
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-		"MovementSpeed"				"270"	
+		"MovementSpeed"				"500"	
 	}
 
 	"npc_dota_hero_terrorblade_demon_hunter"
@@ -37,7 +43,7 @@
 		"Ability10"					""
 		"Ability11"					""
 		"Ability12"					""
-
+		"AbilityLayout"				"5"
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		"MovementSpeed"				"360"	
 
